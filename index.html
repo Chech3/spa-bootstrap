@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sección de Contacto y Redes Sociales -->
+    <nav style="background-color: rgb(2, 85, 125)" class="py-2 px-2">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <!-- Contacto -->
+          <div
+            class="col-6 col-md-6 d-flex flex-column flex-sm-row justify-content-center justify-content-md-start mb-2 mb-md-0"
+          >
+            <div class="text-center text-sm-start me-4 mb-2 mb-sm-0">
+              <i class="bi bi-telephone-fill text-white"></i>
+              <span class="text-white ms-2">123 456 789</span>
+            </div>
+            <div class="text-center text-sm-start">
+              <i class="bi bi-envelope-fill text-white"></i>
+              <span class="text-white ms-2">info@email.com</span>
+            </div>
+          </div>
+
+          <!-- Redes Sociales -->
+          <div class="col-6 col-md-6 text-center text-md-end">
+            <i class="bi bi-youtube mx-2 text-white"></i>
+            <i class="bi bi-instagram mx-2 text-white"></i>
+            <i class="bi bi-facebook mx-2 text-white"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header con formulario -->
+    <div
+      style="
+        background-image: linear-gradient(
+            rgba(82, 151, 255, 0.5),
+            rgba(82, 151, 255, 0.5)
+          ), url(./imagenes/imagen-hero.jpg);
+        background-position: center;
+        background-size: cover;
+      "
+      class="min-vh-100"
+    >
+      <nav class="text-white py-3">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Logo y Título -->
+            <div class="col-md-6">
+              <div class="logo">
+                <img
+                  width="64px"
+                  height="48px"
+                  src="imagenes/LOGO.png"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- Links de navegación -->
+            <div class="col-md-6 text-center text-md-end fw-bold">
+              <a href="#" class="text-white me-4 text-decoration-none"
+                >About Us</a
+              >
+              <a href="#" class="text-white me-4 text-decoration-none"
+                >Courses</a
+              >
+              <a href="#" class="text-white me-4 text-decoration-none">Team</a>
+              <a href="#" class="text-white text-decoration-none">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container my-5">
+        <div class="row">
+          <!-- Texto  -->
+          <div class="col-md-8 mb-4">
+            <h1
+              class="display-6 fw-semibold mb-3 text-white text-center text-md-start"
+            >
+              Welcome to the University
+            </h1>
+            <div class="tag-responsive">
+              <span class="bg-warning w-50" style="height: 4px"></span>
+            </div>
+            <h2
+              class="display-4 fw-bold mt-4 text-white text-center text-md-start"
+            >
+              We are an online platform to make learning
+            </h2>
+            <div class="tag-responsive">
+              <button
+                class="btn btn-warning mt-3 text-white font-weight-bold px-5 fs-4 border border-white rounded-pill"
+              >
+                Get Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Formulario de registro -->
+          <div class="col-12 col-md-4 mx-auto my-5 my-md-0">
+            <div class="bg-white rounded shadow w-100">
+              <div class="w-100">
+                <h3
+                  style="
+                    background-color: rgb(2, 85, 125);
+                    border-radius: 5px 5px 0 0;
+                  "
+                  class="h4 fw-semibold text-white text-center py-2 m-0"
+                >
+                  Register Now!
+                </h3>
+                <div class="w-100 bg-warning" style="height: 4px"></div>
+              </div>
+              <form class="p-4">
+                <div class="mb-3">
+                  <input
+                    style="background-color: #cecece"
+                    type="text"
+                    class="form-control rounded-4"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      style="background-color: #cecece"
+                      type="email"
+                      class="form-control rounded-4"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      style="background-color: #cecece"
+                      type="tel"
+                      class="form-control rounded-4"
+                      placeholder="Phone"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    style="background-color: #cecece"
+                    type="text"
+                    class="form-control rounded-4"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    style="resize: none; background-color: #cecece"
+                    class="form-control rounded-4"
+                    rows="3"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-warning text-white px-5 rounded-4"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The Most Popular -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 text-center text-md-start">
+          <h3><span class="dot"></span>The Most Popular</h3>
+          <div
+            class="bg-warning dynamic-width mx-auto mx-md-0"
+            style="height: 4px"
+          ></div>
+          <h3 class="fw-bolder">Know what we offer you</h3>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
+          <!-- Card -->
+          <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
+            <!-- Imagen -->
+            <img
+              src="imagenes/IMAGE CURSO 1.jpg"
+              class="card-img-top h-100"
+              alt="Image description"
+            />
+            <div
+              class="w-100"
+              style="background-color: rgb(2, 85, 125); height: 6px"
+            ></div>
+            <!-- Línea Amarilla -->
+            <div class="w-100 bg-warning" style="height: 8px"></div>
+
+            <!-- Cuerpo de la tarjeta -->
+            <div class="card-body text-center">
+              <!-- Etiqueta "new" -->
+              <span
+                class="badge bg-light text-dark position-absolute"
+                style="bottom: 180px; left: 10px"
+                >new</span
+              >
+
+              <!-- Título -->
+              <h5 class="card-title text-black fw-bold">
+                Design for the web with adobe photoshop
+              </h5>
+
+              <a
+                href="#"
+                class="btn btn-warning text-white rounded-pill px-4 fw-bold mt-4 mb-2"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
+          <!-- Card -->
+          <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
+            <!-- Imagen -->
+            <img
+              src="imagenes/IMAGE CURSO 2.jpg"
+              class="card-img-top h-100"
+              alt="Image description"
+            />
+            <div
+              class="w-100"
+              style="background-color: rgb(2, 85, 125); height: 6px"
+            ></div>
+            <!-- Línea Amarilla -->
+            <div class="w-100 bg-warning" style="height: 8px"></div>
+
+            <!-- Cuerpo  -->
+            <div class="card-body text-center">
+              <!-- Título -->
+              <h5 class="card-title text-black fw-bold">
+                Design for the web with adobe photoshop
+              </h5>
+
+              <a
+                href="#"
+                class="btn btn-warning text-white rounded-pill px-4 fw-bold mt-4 mb-2"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
+          <!-- Card -->
+          <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
+            <!-- Imagen -->
+            <img
+              src="imagenes/IMAGE CURSO 3.jpg"
+              class="card-img-top h-100"
+              alt="Image description"
+            />
+            <div
+              class="w-100"
+              style="background-color: rgb(2, 85, 125); height: 6px"
+            ></div>
+            <!-- Línea Amarilla -->
+            <div class="w-100 bg-warning" style="height: 8px"></div>
+
+            <!-- Cuerpo  -->
+            <div class="card-body text-center">
+              <!-- Título -->
+              <h5 class="card-title text-black fw-bold">
+                Design for the web with adobe photoshop
+              </h5>
+
+              <a
+                href="#"
+                class="btn btn-warning text-white rounded-pill px-4 fw-bold mt-4 mb-2"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
+          <!-- Card -->
+          <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
+            <!-- Imagen -->
+            <img
+              src="imagenes/IMAGE CURSO 4.jpg"
+              class="card-img-top h-100"
+              alt="Image description"
+            />
+            <div
+              class="w-100"
+              style="background-color: rgb(2, 85, 125); height: 6px"
+            ></div>
+            <!-- Línea Amarilla -->
+            <div class="w-100 bg-warning" style="height: 8px"></div>
+
+            <!-- Cuerpo -->
+            <div class="card-body text-center">
+              <!-- Título -->
+              <h5 class="card-title text-black fw-bold">
+                Design for the web with adobe photoshop
+              </h5>
+
+              <a
+                href="#"
+                class="btn btn-warning text-white rounded-pill px-4 fw-bold mt-4 mb-2"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="d-flex justify-content-center my-5">
+            <button class="btn btn-outline-warning rounded-4 px-4 fw-semibold">
+              View More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About us -->
+    <div style="background-color: rgb(2, 85, 125)">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mt-5">
+            <div class="text-center text-md-start text-white">
+              <h3>
+                <span class="dot"></span>
+                About us
+              </h3>
+            </div>
+            <div class="tag-responsive">
+              <div class="w-50 bg-warning" style="height: 4px"></div>
+            </div>
+            <h3 class="text-white fw-bold text-center text-md-start">
+              Know Everything we do for you
+            </h3>
+
+            <p class="text-white text-center text-md-start mt-5 lead">
+              The university is a physical place, buildings, laboratories,
+              libraries... where students and teachers meet. The university is
+              also a human-social system, that is, a set of elements that are
+              related and interact with each other.
+            </p>
+            <div class="tag-responsive mb-4">
+              <a
+                href="#"
+                class="btn btn-warning mt-3 text-white font-weight-bold px-3 fs-4 px-sm-4 border border-white rounded-pill"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="p-5 mx-auto mx-sm-0 my-5">
+              <img
+                class="container-img bordered-image w-100"
+                src="imagenes/IMAGE ABOUT US.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Iconos -->
+    <div
+      style="
+        background-image: linear-gradient(
+            rgba(4, 0, 254, 0.324),
+            rgba(25, 4, 120, 0.5)
+          ),
+          url(./imagenes/BACKGROUND\ BENEFITS.jpg);
+        background-position: center;
+        background-size: cover;
+      "
+      class="container-fluid"
+    >
+      <div class="container">
+        <div class="row text-center text-white">
+          <!-- Columna 1 -->
+          <div class="col-6 col-md-3 my-5">
+            <div class="circle bg-white mx-auto mb-3">
+              <img
+                width="48px"
+                src="imagenes/ICONO 1.png"
+                alt="Icono 1"
+                class="img-fluid"
+              />
+            </div>
+            <h4>Excellent Content</h4>
+          </div>
+
+          <!-- Columna 2 -->
+          <div class="col-6 col-md-3 my-5">
+            <div class="circle bg-white mx-auto mb-3">
+              <img
+                width="48px"
+                src="imagenes/ICONO 2.png"
+                alt="Icono 2"
+                class="img-fluid"
+              />
+            </div>
+            <h4>Experts Instructors</h4>
+          </div>
+
+          <!-- Columna 3 -->
+          <div class="col-6 col-md-3 my-5">
+            <div class="circle bg-white mx-auto mb-3">
+              <img
+                width="48px"
+                src="imagenes/ICONO 3.png"
+                alt="Icono 3"
+                class="img-fluid"
+              />
+            </div>
+            <h4>The Best Professionals</h4>
+          </div>
+
+          <!-- Columna 4 -->
+          <div class="col-6 col-md-3 my-5">
+            <div class="circle bg-white mx-auto mb-3">
+              <img
+                width="48px"
+                src="imagenes/ICONO 4.png"
+                alt="Icono 4"
+                class="img-fluid"
+              />
+            </div>
+            <h4>Countless Courses</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 my-5">
+          <div class="text-center text-md-start text-black">
+            <h3>
+              <span class="dot"></span>
+              Study careers
+            </h3>
+            <div class="tag-responsive">
+              <div class="w-25 bg-warning" style="height: 4px"></div>
+            </div>
+            <h3 class="fw-bold">Explore the different careers we offer</h3>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="row p-5">
+        <div class="col-md-8">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div
+                class="card-study text-white"
+                style="
+                  background-image: url('imagenes/image-administration.jpg');
+                "
+              >
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Administration</h5>
+                  <button
+                    class="btn btn-warning rounded-pill border-white btn-sm btn-explore"
+                  >
+                    Explore
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div
+                class="card-study text-white"
+                style="background-image: url('imagenes/image-accounting.jpg')"
+              >
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Accounting</h5>
+                  <button
+                    class="btn btn-warning rounded-pill border-white btn-sm btn-explore"
+                  >
+                    Explore
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div
+                class="card-study card-archi text-white"
+                style="background-image: url('imagenes/image-ar.jpg')"
+              >
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Architecture</h5>
+                  <button
+                    class="btn btn-warning rounded-pill border-white btn-sm btn-explore"
+                  >
+                    Explore
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="row g-4">
+            <div class="col-md-12">
+              <div
+                class="card-study card-study-small text-white"
+                style="background-image: url('imagenes/image-mat.jpg')"
+              >
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Mathematics</h5>
+                  <button
+                    class="btn btn-warning rounded-pill border-white btn-sm btn-explore"
+                  >
+                    Explore
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div
+                class="card-study card-study-small text-white"
+                style="background-image: url('imagenes/image-programming.jpg')"
+              >
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Programming</h5>
+                  <button
+                    class="btn btn-warning rounded-pill border-white btn-sm btn-explore"
+                  >
+                    Explore
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div
+                class="card-study card-study-small text-white"
+                style="background-image: url('imagenes/image-biology.jpg')"
+              >
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Biology</h5>
+                  <button
+                    class="btn btn-warning rounded-pill border-white btn-sm btn-explore"
+                  >
+                    Explore
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="d-flex justify-content-center align-items-center my-5">
+            <button class="btn btn-outline-warning rounded-4 px-4 fw-semibold">
+              View More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background-color: #e7e7e7" class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center text-md-start text-black my-5">
+              <h3>
+                <span class="dot"></span>
+                Our Team
+              </h3>
+              <div class="tag-responsive">
+                <div class="w-25 bg-warning" style="height: 4px"></div>
+              </div>
+              <h3 class="fw-bold">Meet the best professionals</h3>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card">
+              <img
+                src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+                class="card-img-top"
+                alt="Graduación"
+              />
+              <div class="card-body text-center">
+                <img
+                  src="imagenes/IMAGE TEAM 1.jpg"
+                  class="rounded-circle profile-image"
+                  alt="Jhon Smith"
+                />
+                <h5 class="card-title mt-3">Jhon Smith</h5>
+                <p class="card-text text-warning">Math Teacher</p>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card">
+              <img
+                src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+                class="card-img-top"
+                alt="Graduación"
+              />
+              <div class="card-body text-center">
+                <img
+                  src="imagenes/IMAGE TEAM 2.jpg"
+                  class="rounded-circle profile-image"
+                  alt="Dave Morgan"
+                />
+                <h5 class="card-title mt-3">Dave Morgan</h5>
+                <p class="card-text text-warning">Math Teacher</p>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card">
+              <img
+                src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+                class="card-img-top"
+                alt="Graduación"
+              />
+              <div class="card-body text-center">
+                <img
+                  src="imagenes/IMAGE TEAM 4.jpg"
+                  class="rounded-circle profile-image"
+                  alt="Zara Smith"
+                />
+                <h5 class="card-title mt-3">Zara Smith</h5>
+                <p class="card-text text-warning">Biology Teacher</p>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5">
+            <div class="card">
+              <img
+                src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
+                class="card-img-top"
+                alt="Graduación"
+              />
+              <div class="card-body text-center">
+                <img
+                  src="imagenes/IMAGE TEAM 3.jpg"
+                  class="rounded-circle profile-image"
+                  alt="Jimena Soto"
+                />
+                <h5 class="card-title mt-3">Jimena Soto</h5>
+                <p class="card-text text-warning">Math Teacher</p>
+                <a href="#" class="btn btn-outline-warning rounded-pill px-4"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
