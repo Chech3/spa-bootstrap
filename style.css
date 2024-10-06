@@ -221,6 +221,15 @@
   object-fit: cover;
   margin: 0 auto;
 }
+
+@media (max-width: 767px) {
+  .carousel-item {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  } }
+
 @media (max-width: 767px) {
   .testimonial-section {
       min-height: auto;
