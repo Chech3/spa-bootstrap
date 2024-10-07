@@ -8,6 +8,33 @@
   margin-right: 6px;
 }
 
+.cursor-point {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .cursor-point:hover {
+  font-size: 2rem;
+} */
+.social-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.squad {
+  width: 255px;
+  height: 160px;
+  border: 2px solid rgb(112, 124, 0);
+  border-radius: 5px;
+  transform: rotate(5deg);
+  position: absolute;
+  bottom: 40px;
+  overflow: hidden;
+  z-index: 1;
+  /* left: 50px; */
+  /* right: 40px;  */
+}
+
 
 
 .show-shadow {
@@ -34,13 +61,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Para que el video esté detrás del contenido */
+    z-index: -2; /* Para que el video esté detrás del contenido */
   }
   
-  .content {
-    position: relative;
-    z-index: 1; 
-  }
+ 
 
 .bordered-image {
   border: 5px solid rgb(150, 178, 211); 
@@ -214,28 +238,72 @@
   background-position: center;
   color: white;
   min-height: 500px;
+  overflow-x: hidden;
+  padding: 50px 0;
+}
+
+.carousel-item {
+  
+  min-height: 450px;
 }
 .carousel-item img {
   width: 350px;
   height: 350px;
   object-fit: cover;
+  object-position: center;
   margin: 0 auto;
 }
 
-@media (max-width: 767px) {
-  .carousel-item {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-  } }
+/* .carousel-caption {
+  position: static;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: 20px;
+} */
+
+.image-container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.name-overlay {
+  text-align: center;
+  background-color: #f0ad4e;
+  color: white;
+  padding: 10px;
+}
 
 @media (max-width: 767px) {
   .testimonial-section {
       min-height: auto;
   }
-  .carousel-caption {
-      position: static;
-      padding: 20px 0;
+
+  .carousel-item img {
+      width: 250px;
+      height: 250px;
+  }
+
+  .name-overlay {
+    width: auto;
+    background-color: transparent;
+  }
+}
+
+
+.logo-js {
+  width: 64px; 
+  height: 32px;
+}
+
+.font-footer {
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .font-footer {
+    font-size: 10px;
   }
 }
