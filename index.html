@@ -29,26 +29,51 @@
     <!-- Sección de Contacto y Redes Sociales -->
     <nav style="background-color: rgb(2, 85, 125)" class="py-2 px-2">
       <div class="container">
-        <div class="row justify-content-between align-items-center">
+        <div
+          id="university"
+          class="row justify-content-between align-items-center"
+        >
           <!-- Contacto -->
           <div
             class="col-6 col-md-6 d-flex flex-column flex-sm-row justify-content-center justify-content-md-start mb-2 mb-md-0"
           >
             <div class="text-center text-sm-start me-4 mb-2 mb-sm-0">
-              <i class="bi bi-telephone-fill text-white"></i>
-              <span class="text-white ms-2">123 456 789</span>
+              <a class="text-decoration-none" href="tel:+123456789">
+                <i class="bi bi-telephone-fill text-white"></i>
+                <span class="text-white ms-2">123 456 789</span>
+              </a>
             </div>
             <div class="text-center text-sm-start">
-              <i class="bi bi-envelope-fill text-white"></i>
-              <span class="text-white ms-2">info@email.com</span>
+              <a class="text-decoration-none" href="mailto:info@email.com">
+                <i class="bi bi-envelope-fill text-white"></i>
+                <span class="text-white ms-2">info@email.com</span>
+              </a>
             </div>
           </div>
 
           <!-- Redes Sociales -->
           <div class="col-6 col-md-6 text-center text-md-end">
-            <i class="bi bi-youtube mx-2 text-white cursor-point"></i>
-            <i class="bi bi-instagram mx-2 text-white cursor-point"></i>
-            <i class="bi bi-facebook mx-2 text-white cursor-point"></i>
+            <a
+              class="text-decoration-none"
+              target="_blank"
+              href="https://www.youtube.com/"
+            >
+              <i class="bi bi-youtube mx-2 text-white"></i>
+            </a>
+            <a
+              class="text-decoration-none"
+              target="_blank"
+              href="http://www.instagram.com"
+            >
+              <i class="bi bi-instagram mx-2 text-white"></i>
+            </a>
+            <a
+              class="text-decoration-none"
+              target="_blank"
+              href="http://www.facebook.com"
+            >
+              <i class="bi bi-facebook mx-2 text-white"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -61,7 +86,14 @@
           <div class="row align-items-center align-content-md-between">
             <!-- Logo y Título -->
             <div class="col-12 col-md-6 d-flex justify-content-between">
-              <img width="84px" height="60px" src="imagenes/LOGO.png" alt="" />
+              <a href="#university">
+                <img
+                  width="92px"
+                  height="60px"
+                  src="imagenes/LOGO.png"
+                  alt=""
+                />
+              </a>
 
               <button class="menu-toggle" aria-label="Open Menu">
                 <i class="bi bi-list fs-1"></i>
@@ -70,7 +102,7 @@
 
             <!-- Links de navegación -->
             <div class="col-12 col-md-6 text-center text-md-end fw-bold">
-              <div class="links-navegation">
+              <div class="links-navegation text-nav">
                 <a href="#aboutUs" class="text-white me-4 text-decoration-none"
                   >About Us</a
                 >
@@ -90,13 +122,16 @@
       </nav>
       <div class="overlay"></div>
 
-      <video class="bg-video" autoplay muted loop>
-        <source src="Videos/hero-video.mp4" type="video/mp4" />
-        Tu navegador no soporta la reproducción de video.
-      </video>
+      <div class="video-container">
+        <video class="bg-video" autoplay muted loop>
+          <source src="Videos/hero-video.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <div class="overlay-video"></div>
+      </div>
 
       <div class="container my-5">
-        <div class="row">
+        <div class="row pb-5">
           <!-- Texto  -->
           <div class="col-md-8 mb-4">
             <h1
@@ -198,18 +233,19 @@
     <div class="container-fluid bg-white">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center text-md-start mt-5">
-            <h3><span class="dot"></span>The Most Popular</h3>
+          <div class="col-md-12 text-center text-md-start my-5">
+            <h3 class="my-1"><span class="dot"></span>The Most Popular</h3>
             <div
               class="bg-warning dynamic-width mx-auto mx-md-0"
               style="height: 4px"
             ></div>
             <h3 class="fw-bolder">Know what we offer you</h3>
           </div>
-
+        </div>
+        <div class="row">
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
             <!-- Card -->
-            <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
+            <div class="card shadow rounded-4 mx-auto mx-md-0">
               <!-- Imagen -->
               <img
                 src="imagenes/IMAGE CURSO 1.jpg"
@@ -245,7 +281,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
             <!-- Card -->
             <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
@@ -277,7 +312,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
             <!-- Card -->
             <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
@@ -309,7 +343,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-5">
             <!-- Card -->
             <div class="card shadow rounded-4 mx-auto mx-md-0 w-auto">
@@ -341,18 +374,21 @@
               </div>
             </div>
           </div>
+        </div>
 
+        <div class="row">
           <div class="col-md-12">
             <div class="d-flex justify-content-center my-5">
               <button
                 id="aboutUs"
-                class="btn btn-outline-warning rounded-4 px-4 fw-semibold"
+                class="rounded-pill btn btn-outline-warning px-3 fs-4 px-sm-4 fw-semibold"
               >
                 View More
               </button>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
@@ -377,7 +413,7 @@
               Know Everything we do for you
             </h3>
 
-            <p class="text-white text-center text-md-start mt-5 lead">
+            <p class="text-white text-center text-md-start mt-5 lead fw-medium">
               The university is a physical place, buildings, laboratories,
               libraries... where students and teachers meet. The university is
               also a human-social system, that is, a set of elements that are
@@ -604,7 +640,7 @@
           <div class="col-md-12">
             <div class="d-flex justify-content-center align-items-center my-5">
               <button
-                class="btn btn-outline-warning rounded-4 px-4 fw-semibold"
+                class="rounded-pill btn btn-outline-warning px-3 fs-4 px-sm-4 fw-semibold"
               >
                 View More
               </button>
@@ -630,9 +666,9 @@
             </div>
           </div>
         </div>
-        <div class="row p-5">
+        <div class="row p-5 d-flex g-5">
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div class="card">
+            <div style="height: 105%" class="card">
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
                 class="card-img-top"
@@ -654,7 +690,7 @@
           </div>
 
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div class="card">
+            <div style="height: 105%" class="card">
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
                 class="card-img-top"
@@ -675,7 +711,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div class="card">
+            <div style="height: 105%" class="card">
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
                 class="card-img-top"
@@ -696,7 +732,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div class="card">
+            <div style="height: 105%" class="card">
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
                 class="card-img-top"
@@ -716,6 +752,16 @@
               </div>
             </div>
           </div>
+
+          <div
+            class="col-12 d-flex align-content-center justify-content-center my-5"
+          >
+            <button
+              class="rounded-pill border border-white text-white btn btn-warning px-4 fs-4 fw-semibold"
+            >
+              View More
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -728,7 +774,7 @@
               class="col-12 col-md-6 mb-4 mb-md-0 d-flex flex-column justify-content-center align-content-center mx-auto"
             >
               <p class="text-center fs-4">View testimonials</p>
-              <h2 class="text-center text-md-start display-4 fw-bold">
+              <h2 class="text-center text-center display-5 fw-bold">
                 FOR US IT IS VERY IMPORTANT TO KNOW THE OPINIONS OF OUR CLIENTS
               </h2>
             </div>
@@ -854,12 +900,11 @@
             </div>
           </div>
           <div
-          style="font-weight: normal;"
             class="col-12 col-md-3 p-5 d-flex flex-column gap-2 text-center text-md-start links-navegation"
           >
             <h3 class="text-warning">Quick Links</h3>
 
-            <a href="#aboutUs" class="text-white fs-5 text-decoration-none "
+            <a href="#aboutUs" class="text-white fs-5 text-decoration-none"
               >About Us</a
             >
             <a href="#courses" class="text-white fs-5 text-decoration-none"
@@ -876,30 +921,48 @@
             <h3 class="text-warning text-center text-md-start">Contact Info</h3>
 
             <div class="text-center text-md-start fs-5">
-              <i class="bi bi-telephone-fill text-white"></i>
-              <span class="text-white ms-2">123 456 789</span>
+              <a class="text-decoration-none" href="tel:+123456789">
+                <i class="bi bi-telephone-fill text-white"></i>
+                <span class="text-white ms-2">123 456 789</span>
+              </a>
             </div>
             <div class="text-center text-md-start fs-5">
-              <i class="bi bi-envelope-fill text-white"></i>
-              <span class="text-white ms-2">info@email.com</span>
+              <a class="text-decoration-none" href="mailto:info@email.com">
+                <i class="bi bi-envelope-fill text-white"></i>
+                <span class="text-white ms-2">info@email.com</span>
+              </a>
             </div>
 
             <div class="text-center text-md-start fs-5">
-              <i class="bi bi-geo-alt text-white"></i>
-              <span class="text-white ms-2">Address, United States</span>
+              <a class="text-decoration-none" href="https://maps.google.com/">
+                <i class="bi bi-geo-alt text-white"></i>
+                <span class="text-white ms-2">Address, United States</span>
+              </a>
             </div>
             <div
               class="d-flex gap-3 justify-content-center align-items-center justify-content-md-start align-content-md-start"
             >
-            <a target="_blank" href="https://www.youtube.com/">
-              <i class="bi bi-youtube mx-2 text-white"></i>
-            </a>
-            <a target="_blank" href="">
-              <i class="bi bi-instagram mx-2 text-white"></i>
-            </a>
-            <a target="_blank" href="">
-              <i class="bi bi-facebook mx-2 text-white"></i>
-            </a>
+              <a
+                class="text-decoration-none"
+                target="_blank"
+                href="https://www.youtube.com/"
+              >
+                <i class="bi bi-youtube mx-2 text-white"></i>
+              </a>
+              <a
+                class="text-decoration-none"
+                target="_blank"
+                href="http://www.instagram.com"
+              >
+                <i class="bi bi-instagram mx-2 text-white"></i>
+              </a>
+              <a
+                class="text-decoration-none"
+                target="_blank"
+                href="http://www.facebook.com"
+              >
+                <i class="bi bi-facebook mx-2 text-white"></i>
+              </a>
             </div>
           </div>
 

@@ -1,3 +1,8 @@
+.btn:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.10);
+}
+
 .dot {
   display: inline-block;
   height: 10px;
@@ -40,7 +45,7 @@
 .links-navegation a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  
   transition: color 0.3s ease;
 }
 
@@ -48,7 +53,7 @@
 .links-navegation a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+ 
   position: relative;
   transition: color 0.3s ease;
 }
@@ -93,6 +98,11 @@
   z-index: 999;
 }
 
+
+.text-nav {
+  font-size: 20px;
+  line-height: 24px;
+}
 @media (max-width: 768px) {
   .links-navegation {
       position: fixed;
@@ -106,6 +116,7 @@
       display: flex;
       flex-direction: column;
       z-index: 1001;
+      text-align: center;
   }
   .links-navegation.active {
       right: 0;
@@ -118,6 +129,18 @@
   }
   .overlay.active {
       display: block;
+  }
+
+  .text-nav {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-nav {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -149,6 +172,7 @@
     }
   }
 
+  
  
 
   .bg-video {
@@ -160,6 +184,16 @@
     object-fit: cover;
     z-index: -2; /* Para que el video esté detrás del contenido */
   }
+
+  .overlay-video {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1200px;
+    background-color: rgba(43, 135, 255, 0.3); /* Tono azul con transparencia */
+}
   
  
 
@@ -387,7 +421,7 @@
 
 
 .logo-js {
-  width: 64px; 
+  width: 60px; 
   height: 48px;
 }
 
