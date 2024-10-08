@@ -27,10 +27,7 @@
   </head>
   <body>
     <!-- Sección de Contacto y Redes Sociales -->
-    <nav
-      style="background-color: rgb(2, 85, 125)"
-      class="py-2 px-2 fixed-top show-shadow"
-    >
+    <nav style="background-color: rgb(2, 85, 125)" class="py-2 px-2">
       <div class="container">
         <div class="row justify-content-between align-items-center">
           <!-- Contacto -->
@@ -49,7 +46,7 @@
 
           <!-- Redes Sociales -->
           <div class="col-6 col-md-6 text-center text-md-end">
-            <i class="bi bi-youtube mx-2 text-white cursor-point "></i>
+            <i class="bi bi-youtube mx-2 text-white cursor-point"></i>
             <i class="bi bi-instagram mx-2 text-white cursor-point"></i>
             <i class="bi bi-facebook mx-2 text-white cursor-point"></i>
           </div>
@@ -58,41 +55,45 @@
     </nav>
 
     <!-- Header con formulario -->
-    <video class="bg-video" autoplay muted loop>
-      <source src="Videos/hero-video.mp4" type="video/mp4" />
-      Tu navegador no soporta la reproducción de video.
-    </video>
-
-    <div class="pt-5 my-md-0 my-5">
-      <nav class="text-white py-3">
+    <div class="mt-4">
+      <nav class="text-white sticky-nav">
         <div class="container">
-          <div class="row align-items-center">
+          <div class="row align-items-center align-content-md-between">
             <!-- Logo y Título -->
-            <div class="col-md-6">
-              <div class="logo">
-                <img
-                  width="64px"
-                  height="48px"
-                  src="imagenes/LOGO.png"
-                  alt=""
-                />
-              </div>
+            <div class="col-12 col-md-6 d-flex justify-content-between">
+              <img width="84px" height="60px" src="imagenes/LOGO.png" alt="" />
+
+              <button class="menu-toggle" aria-label="Open Menu">
+                <i class="bi bi-list fs-1"></i>
+              </button>
             </div>
 
             <!-- Links de navegación -->
-            <div class="col-md-6 text-center text-md-end fw-bold">
-              <a href="#" class="text-white me-4 text-decoration-none"
-                >About Us</a
-              >
-              <a href="#" class="text-white me-4 text-decoration-none"
-                >Courses</a
-              >
-              <a href="#" class="text-white me-4 text-decoration-none">Team</a>
-              <a href="#" class="text-white text-decoration-none">Contact Us</a>
+            <div class="col-12 col-md-6 text-center text-md-end fw-bold">
+              <div class="links-navegation">
+                <a href="#aboutUs" class="text-white me-4 text-decoration-none"
+                  >About Us</a
+                >
+                <a href="#courses" class="text-white me-4 text-decoration-none"
+                  >Courses</a
+                >
+                <a href="#team" class="text-white me-4 text-decoration-none"
+                  >Team</a
+                >
+                <a href="#contact" class="text-white text-decoration-none"
+                  >Contact Us</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </nav>
+      <div class="overlay"></div>
+
+      <video class="bg-video" autoplay muted loop>
+        <source src="Videos/hero-video.mp4" type="video/mp4" />
+        Tu navegador no soporta la reproducción de video.
+      </video>
 
       <div class="container my-5">
         <div class="row">
@@ -109,7 +110,10 @@
             <h2
               class="display-4 fw-bold mt-4 text-white text-center text-md-start"
             >
-              We are an online platform to make learning
+              We are an online
+            </h2>
+            <h2 class="display-4 fw-bold text-white text-center text-md-start">
+              platform to make learning
             </h2>
             <div class="tag-responsive">
               <button
@@ -341,6 +345,7 @@
           <div class="col-md-12">
             <div class="d-flex justify-content-center my-5">
               <button
+                id="aboutUs"
                 class="btn btn-outline-warning rounded-4 px-4 fw-semibold"
               >
                 View More
@@ -471,7 +476,7 @@
       </div>
     </div>
 
-    <div class="container-fluid bg-white">
+    <div id="courses" class="container-fluid bg-white">
       <div class="container">
         <div class="row">
           <div class="col-12 my-5">
@@ -609,7 +614,7 @@
       </div>
     </div>
 
-    <div style="background-color: #e7e7e7" class="container-fluid">
+    <div style="background-color: #e7e7e7" class="container-fluid" id="team">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -838,7 +843,7 @@
       </div>
     </div>
 
-    <div style="background-color: rgb(2, 85, 125)">
+    <div style="background-color: rgb(2, 85, 125)" id="contact">
       <footer class="container">
         <div class="row">
           <div class="col-12 col-md-3">
@@ -849,14 +854,23 @@
             </div>
           </div>
           <div
-            class="col-12 col-md-3 p-5 d-flex flex-column gap-2 text-center text-md-start"
+          style="font-weight: normal;"
+            class="col-12 col-md-3 p-5 d-flex flex-column gap-2 text-center text-md-start links-navegation"
           >
             <h3 class="text-warning">Quick Links</h3>
 
-            <p class="text-white fs-5">About Us</p>
-            <p class="text-white fs-5">Courses</p>
-            <p class="text-white fs-5">Team</p>
-            <p class="text-white fs-5">Contact Us</p>
+            <a href="#aboutUs" class="text-white fs-5 text-decoration-none "
+              >About Us</a
+            >
+            <a href="#courses" class="text-white fs-5 text-decoration-none"
+              >Courses</a
+            >
+            <a href="#team" class="text-white fs-5 text-decoration-none"
+              >Team</a
+            >
+            <a href="#contact" class="text-white fs-5 text-decoration-none"
+              >Contact Us</a
+            >
           </div>
           <div class="col-12 col-md-3 p-5 d-flex flex-column gap-4">
             <h3 class="text-warning text-center text-md-start">Contact Info</h3>
@@ -877,9 +891,15 @@
             <div
               class="d-flex gap-3 justify-content-center align-items-center justify-content-md-start align-content-md-start"
             >
+            <a target="_blank" href="https://www.youtube.com/">
               <i class="bi bi-youtube mx-2 text-white"></i>
+            </a>
+            <a target="_blank" href="">
               <i class="bi bi-instagram mx-2 text-white"></i>
+            </a>
+            <a target="_blank" href="">
               <i class="bi bi-facebook mx-2 text-white"></i>
+            </a>
             </div>
           </div>
 
@@ -893,7 +913,7 @@
                 <input
                   type="text"
                   class="form-control rounded-pill rounded-end"
-                  placeholder="Ingrese texto..."
+                  placeholder="Write"
                   aria-label="Texto de entrada"
                   aria-describedby="button-addon2"
                 />
@@ -902,7 +922,7 @@
                   type="submit"
                   id="button-addon2"
                 >
-                  Enviar
+                  Submit
                 </button>
               </div>
             </form>
@@ -921,11 +941,13 @@
                 <p>Designed And Developed by Josesilvera.com</p>
               </div>
               <div class="mt-3">
-                <img
-                  class="logo-js"
-                  src="imagenes/logo Silvera Enterprises.png"
-                  alt=""
-                />
+                <a target="_blank" href="https://striveenterprise.com/">
+                  <img
+                    class="logo-js"
+                    src="imagenes/logo Silvera Enterprises.png"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
           </div>
