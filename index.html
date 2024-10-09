@@ -95,8 +95,14 @@
                 />
               </a>
 
-              <button class="menu-toggle" aria-label="Open Menu">
-                <i class="bi bi-list fs-1"></i>
+              <button
+                class="hamburger-button menu-toggle"
+                aria-label="Menú"
+                aria-expanded="false"
+              >
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
               </button>
             </div>
 
@@ -388,7 +394,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -446,8 +451,9 @@
     <div
       style="
         background-image: linear-gradient(
-            rgba(4, 0, 254, 0.324),
-            rgba(25, 4, 120, 0.5)
+            rgba(0, 1, 3, 0.6),
+            /* Capa superior más oscura */ rgba(1, 1, 5, 0.6)
+              /* Capa inferior más oscura */
           ),
           url(./imagenes/BACKGROUND\ BENEFITS.jpg);
         background-position: center;
@@ -668,13 +674,14 @@
         </div>
         <div class="row p-5 d-flex g-5">
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div style="height: 105%" class="card">
+            <div style="height: 105%" class="card position-relative">
+              <div class="overlay-card"></div>
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
-                class="card-img-top"
+                class="card-img-top object-fit-cover darkness"
                 alt="Graduación"
               />
-              <div class="card-body text-center">
+              <div class="card-body text-center z-2 position-relative">
                 <img
                   src="imagenes/IMAGE TEAM 1.jpg"
                   class="rounded-circle profile-image"
@@ -690,13 +697,14 @@
           </div>
 
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div style="height: 105%" class="card">
+            <div style="height: 105%" class="card position-relative">
+              <div class="overlay-card"></div>
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
-                class="card-img-top"
+                class="card-img-top object-fit-cover darkness"
                 alt="Graduación"
               />
-              <div class="card-body text-center">
+              <div class="card-body text-center z-2 position-relative">
                 <img
                   src="imagenes/IMAGE TEAM 2.jpg"
                   class="rounded-circle profile-image"
@@ -711,13 +719,14 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div style="height: 105%" class="card">
+            <div style="height: 105%" class="card position-relative">
+              <div class="overlay-card"></div>
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
-                class="card-img-top"
+                class="card-img-top object-fit-cover darkness"
                 alt="Graduación"
               />
-              <div class="card-body text-center">
+              <div class="card-body text-center z-2 position-relative">
                 <img
                   src="imagenes/IMAGE TEAM 4.jpg"
                   class="rounded-circle profile-image"
@@ -732,13 +741,14 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-3 my-5 my-md-4 my-lg-0">
-            <div style="height: 105%" class="card">
+            <div style="height: 105%" class="card position-relative">
+              <div class="overlay-card"></div>
               <img
                 src="imagenes/IMAGE BACKGROUND CARD TEAM  (3).jpg"
-                class="card-img-top"
+                class="card-img-top object-fit-cover darkness"
                 alt="Graduación"
               />
-              <div class="card-body text-center">
+              <div class="card-body text-center z-2 position-relative">
                 <img
                   src="imagenes/IMAGE TEAM 3.jpg"
                   class="rounded-circle profile-image"
@@ -754,7 +764,7 @@
           </div>
 
           <div
-            class="col-12 d-flex align-content-center justify-content-center my-5"
+            class="col-12 d-flex align-content-center justify-content-center mt-5"
           >
             <button
               class="rounded-pill border border-white text-white btn btn-warning px-4 fs-4 fw-semibold"
@@ -773,7 +783,7 @@
             <div
               class="col-12 col-md-6 mb-4 mb-md-0 d-flex flex-column justify-content-center align-content-center mx-auto"
             >
-              <p class="text-center fs-4">View testimonials</p>
+              <p class="text-center fs-4 m-0">View testimonials</p>
               <h2 class="text-center text-center display-5 fw-bold">
                 FOR US IT IS VERY IMPORTANT TO KNOW THE OPINIONS OF OUR CLIENTS
               </h2>
@@ -939,9 +949,7 @@
                 <span class="text-white ms-2">Address, United States</span>
               </a>
             </div>
-            <div
-              class="d-flex gap-3 justify-content-center align-items-center justify-content-md-start align-content-md-start"
-            >
+            <div class="d-flex gap-3 justify-content-center align-items-center">
               <a
                 class="text-decoration-none"
                 target="_blank"
@@ -976,7 +984,6 @@
                 <input
                   type="text"
                   class="form-control rounded-pill rounded-end"
-                  placeholder="Write"
                   aria-label="Texto de entrada"
                   aria-describedby="button-addon2"
                 />
@@ -998,10 +1005,10 @@
             ></div>
             <div class="d-flex justify-content-between">
               <div class="d-flex flex-column mt-3 font-footer">
-                <p class="m-0">
-                  © Copyright University. All Rights Reserved. This Website Was
+                <p class="m-0">© Copyright University. All Rights Reserved</p>
+                <p>
+                  This Website Was Designed And Developed by Josesilvera.com
                 </p>
-                <p>Designed And Developed by Josesilvera.com</p>
               </div>
               <div class="mt-3">
                 <a target="_blank" href="https://striveenterprise.com/">

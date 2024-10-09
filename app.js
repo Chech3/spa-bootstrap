@@ -1,6 +1,5 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
+
     var navAnimation = document.querySelector('.sticky-nav');
     
     window.addEventListener('scroll', function() {
@@ -10,22 +9,24 @@ document.addEventListener('DOMContentLoaded', function() {
             navAnimation.classList.remove('scrolled');
         }
     });
-});
 
-
-document.addEventListener('DOMContentLoaded', function() {
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const linksNavegation = document.querySelector('.links-navegation');
     const overlay = document.querySelector('.overlay');
+    const hamburgerButton = document.querySelector('.hamburger-button');
 
     function toggleMenu() {
         linksNavegation.classList.toggle('active');
         overlay.classList.toggle('active');
-        menuToggle.setAttribute('aria-expanded', 
-            linksNavegation.classList.contains('active'));
+        hamburgerButton.classList.toggle('open');
+        const isOpen = linksNavegation.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+        hamburgerButton.setAttribute('aria-expanded', isOpen);
     }
 
     menuToggle.addEventListener('click', toggleMenu);
+    hamburgerButton.addEventListener('click', toggleMenu);
 
     // Cerrar el menú al hacer clic en un enlace
     linksNavegation.addEventListener('click', function(e) {
@@ -43,5 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleMenu();
         }
     });
-});
 
+    // Cerrar el menú al hacer clic fuera de él
+    document.addEventListener('click', function(e) {
+        if (linksNavegation.classList.contains('active') &&
+            !linksNavegation.contains(e.target) &&
+            !menuToggle.contains(e.target) &&
+            !hamburgerButton.contains(e.target)) {
+            toggleMenu();
+        }
+    });
+});
