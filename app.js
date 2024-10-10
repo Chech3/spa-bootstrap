@@ -1,8 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    const navAnimation = document.querySelector('.sticky-nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const linksNavegation = document.querySelector('.links-navegation');
+    const overlay = document.querySelector('.overlay');
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const playButtons = document.querySelectorAll('.play-btn');
+    const videos = document.querySelectorAll('.video-item');
 
-    var navAnimation = document.querySelector('.sticky-nav');
-    
-    window.addEventListener('scroll', function() {
+    // Scroll animation for navbar
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             navAnimation.classList.add('scrolled');
         } else {
@@ -10,12 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
-    const menuToggle = document.querySelector('.menu-toggle');
-    const linksNavegation = document.querySelector('.links-navegation');
-    const overlay = document.querySelector('.overlay');
-    const hamburgerButton = document.querySelector('.hamburger-button');
-
+    // Toggle menu
     function toggleMenu() {
         linksNavegation.classList.toggle('active');
         overlay.classList.toggle('active');
@@ -28,30 +29,56 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', toggleMenu);
     hamburgerButton.addEventListener('click', toggleMenu);
 
-    // Cerrar el menú al hacer clic en un enlace
-    linksNavegation.addEventListener('click', function(e) {
+    // Close menu on link click
+    linksNavegation.addEventListener('click', function (e) {
         if (e.target.tagName === 'A') {
             toggleMenu();
         }
     });
 
-    // Cerrar el menú al hacer clic en el overlay
+    // Close menu on overlay click
     overlay.addEventListener('click', toggleMenu);
 
-    // Cerrar el menú con la tecla Escape
-    document.addEventListener('keydown', function(e) {
+    // Close menu on Escape key
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && linksNavegation.classList.contains('active')) {
             toggleMenu();
         }
     });
 
-    // Cerrar el menú al hacer clic fuera de él
-    document.addEventListener('click', function(e) {
-        if (linksNavegation.classList.contains('active') &&
-            !linksNavegation.contains(e.target) &&
-            !menuToggle.contains(e.target) &&
-            !hamburgerButton.contains(e.target)) {
-            toggleMenu();
-        }
+    // Handle carousel video pausing
+    document.getElementById('carouselExampleIndicators').addEventListener('slid.bs.carousel', function () {
+        videos.forEach(video => {
+            video.pause();
+            video.currentTime = 0;
+            video.removeAttribute('controls');
+            playButtons.forEach(btn => btn.classList.remove('hidden'));
+        });
+        
+    });
+
+    // Handle play buttons for each video
+    playButtons.forEach((btn, index) => {
+        const video = videos[index];
+
+        // Play button click
+        btn.addEventListener('click', function () {
+            video.play();
+            video.setAttribute('controls', 'true');
+            btn.classList.add('hidden'); // Hide play button
+        });
+
+        // Show play button when video pauses
+        video.addEventListener('pause', function () {
+            if (video.currentTime < video.duration) {
+                btn.classList.remove('hidden');
+            }
+        });
+
+        // Reset controls and show play button when video ends
+        video.addEventListener('ended', function () {
+            btn.classList.remove('hidden');
+            video.removeAttribute('controls');
+        });
     });
 });
